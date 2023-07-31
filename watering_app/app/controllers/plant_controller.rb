@@ -12,6 +12,5 @@ class PlantController < ApplicationController
   def create
     request = params['plant']
     render status: 200, json: request.to_json
-    # data_parsed = JSON.parse(request)
   end 
 end
