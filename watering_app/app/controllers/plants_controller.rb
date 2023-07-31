@@ -1,5 +1,5 @@
-class PlantController < ApplicationController
-  def get_plant
+class PlantsController < ApplicationController
+  def index
     plant = {
       "name" => "Spider Plant",
       "moisture_level" => 65,
