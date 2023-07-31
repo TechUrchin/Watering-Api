@@ -1,7 +1,7 @@
 # Watering-App
 App to receive data from a pico device that waters plants.
 
-#Installing ruby and ruby on rails
+## Installing ruby and ruby on rails
 - sudo apt-get install libyaml-dev
 - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 - echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
