@@ -8,4 +8,9 @@ class PlantController < ApplicationController
     }
     render :json => plant
   end
+
+  def create
+    request = params['plant']
+    render status: 200, json: request.to_json
+  end 
 end
