@@ -1,16 +1,14 @@
 class PlantsController < ApplicationController
   def index
-    plant = {
-      "name" => "Spider Plant",
-      "moisture_level" => 65,
-      "water_pump_status" => "off",
-      "battery_level" => 85
-    }
-    render :json => plant
+    @plants = Plant.all 
+    render :json => @plants
   end
 
   def create
-    request = params['plant']
-    render status: 200, json: request.to_json
-  end 
+    @plant = Plant.new(plant_params)
+  end
+
+  def plant_params
+    params.require(:plant).permit(:name, :moisture_level, :water_pump_status, :battery_level)
+  end
 end
