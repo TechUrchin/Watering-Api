@@ -8,6 +8,7 @@ class PlantsController < ApplicationController
     @plant = Plant.new(plant_params)
   end
 
+  private
   def plant_params
     params.require(:plant).permit(:name, :moisture_level, :water_pump_status, :battery_level)
   end
