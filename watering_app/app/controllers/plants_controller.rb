@@ -6,6 +6,7 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
+    render json: "OK"
   end
 
   private
