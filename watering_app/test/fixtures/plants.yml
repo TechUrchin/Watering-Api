@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  moisture_level: 1
-  water_pump_status: false
-  battery_level: 1
+  name: spider plant
+  moisture_level: 55
+  water_pump_status: true
+  battery_level: 100
 
 two:
-  name: MyString
-  moisture_level: 1
-  water_pump_status: false
-  battery_level: 1
+  name: 123
+  moisture_level: beans
+  water_pump_status: 11
+  battery_level: 300
