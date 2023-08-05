@@ -1,19 +1,18 @@
 require "test_helper"
 
 class PlantTest < ActiveSupport::TestCase
-  test "validate correct moisture level" do
-    assert_not_nil(Plant.new({name: "spider plant", moisture_level: 22, water_pump_status: "off", battery_level: 33 }))  
+  test "valid plant" do
+    plant = Plant.new(name: "spider plant", moisture_level: 10, water_pump_status: false, battery_level: 33)
+    assert plant.valid?
   end
 
   test "fail on negative moisture levels" do
-    assert_raises(StandardError) do
-      Plant.new({name: "spider plant", moisture_level: -1, water_pump_status: "off", battery_level: 33 })
-    end  
+    plant = Plant.new({name: "spider plant", moisture_level: -1, water_pump_status: "off", battery_level: 33 })
+    assert_not plant.valid?
   end
 
   test "fail on moisture level above 100" do
-    assert_raises(StandardError) do
-      Plant.new({name: "spider plant", moisture_level: 101, water_pump_status: "off", battery_level: 33 })
-    end 
+    plant = Plant.new({name: "spider plant", moisture_level: 101, water_pump_status: "off", battery_level: 33 })
+    assert_not plant.valid?
   end
 end
