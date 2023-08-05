@@ -6,7 +6,11 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    render json: "OK"
+    if @plant.save!
+      render json: "OK"
+    else
+      render json: :unprocessable_entity
+    end
   end
 
   private
