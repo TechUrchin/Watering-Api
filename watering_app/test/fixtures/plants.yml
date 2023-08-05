@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+plant_1:
   name: spider plant
   moisture_level: 55
   water_pump_status: true
   battery_level: 100
 
-two:
-  name: 123
-  moisture_level: beans
-  water_pump_status: 11
-  battery_level: 300
+plant_2:
+  name: mint
+  moisture_level: 88
+  water_pump_status: off
+  battery_level: 22
