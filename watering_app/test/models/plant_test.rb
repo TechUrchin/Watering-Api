@@ -15,4 +15,14 @@ class PlantTest < ActiveSupport::TestCase
     plant = Plant.new({name: "spider plant", moisture_level: 101, water_pump_status: "off", battery_level: 33 })
     assert_not plant.valid?
   end
+
+  test "fail on battery level below 0" do
+    plant = Plant.new({name: "spider plant", moisture_level: 53, water_pump_status: "off", battery_level: -55 })
+    assert_not plant.valid?
+  end
+
+  test "fail on battery level above 100" do
+    plant = Plant.new({name: "spider plant", moisture_level: 11, water_pump_status: "off", battery_level: 101 })
+    assert_not plant.valid?
+  end
 end
