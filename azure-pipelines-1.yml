@@ -16,9 +16,11 @@ steps:
 
 - script: |
     gem install bundler
-    gem install rails -v 7.0.6
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
 - script: bundle exec rake
   displayName: 'bundle exec rake'
+
+- script: gem install rails -v 7.0.6
+  displayName: 'Installing Rails'
